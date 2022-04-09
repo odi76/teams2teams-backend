@@ -7,9 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DemoApplication {
 
 	public static void main(String[] args) {
-		System.out.println("Teams2teams app started");
+		System.out.println("Hello Teams2teams app started");
 		SpringApplication.run(DemoApplication.class, args);
-		System.out.println("Teams2teams app finished");
+		System.out.println("Hello Teams2teams app finished");
 	}
 
 }

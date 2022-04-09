@@ -1,0 +1,53 @@
++04.08:
+spring web hozzásadás
+maven: hiányzik a JAVA_HOME változó
+beállítva:
+JAVA_HOME = c:\Program Files\Java\jdk-17.0.2\
+
+beállítás:
+command promt rendszergazdaként
+setx -m JAVA_HOME "c:\Program Files\Java\jdk-17.0.2"
+
+A SETX állandó bejegyzést hoz létre.
+----------
+vscode: MAVEN Dependencies +: Spring Web
+ erre hiányzik egy csomó jar (50 hiba)
+
+nézet: parancspaletta : spring initialzr : add starters :
+Spring Web
+Spring Data JPA
+
+80 hiba
+-----------
+
+új initzr létrehozás
+dependencies:
+Spring boot devtools
+Lombok
+Spring Web
+Rest Repositories Web
+Spring Data JPA
+H2 Database
+-----------
+04.09:
+intelliJ telepítés
+maven run beállítás
+dependecies duplikáció hiba
+duplikáció törlés
+Nincs goal beállítva
+
+új projektet generálok a weben keresztül.
+
+group: com.teams2teams
+artifact: t2t
+
+dependencies: 
+spring web
+rest repositories
+spring data jpa
+??? spring session
+h2 database
+------
+megbeszélés:
+java 11-et használjunk!
+alap dependencies fent van a leírásban.
