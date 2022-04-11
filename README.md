@@ -1,4 +1,4 @@
-# Teams-2-Teams BE 
+# Teams-2-Teams BE
 
 TBD
 
@@ -10,7 +10,7 @@ TBD
 
 ### 2.1 Dependencies
 
-This is a Spring project which needs the following in order to install and run the application. 
+This is a Spring project which needs the following in order to install and run the application.
 
 * Maven
 * JDK 11
@@ -27,9 +27,9 @@ mvn install
 
 1) First, run the development server:
 
-```bash
-./mvnw spring-boot:run
-```
+    ```bash
+    ./mvnw spring-boot:run
+    ```
 
 2) Open TBD with your browser to see the result.
 
@@ -40,7 +40,7 @@ Laszlo Matusek-Faludi
 ## 4. Version History
 
 * 1.0 (in progress)
-    * Initial Release
+  * Initial Release
 
 ## 5. License
 
