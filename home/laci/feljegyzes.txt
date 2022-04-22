@@ -8,6 +8,8 @@ beállítás:
 command promt rendszergazdaként
 setx -m JAVA_HOME "c:\Program Files\Java\jdk-17.0.2"
 
+setx -m JAVA_HOME "c:\Program Files\Java\jdk-11.0.13"
+
 A SETX állandó bejegyzést hoz létre.
 ----------
 vscode: MAVEN Dependencies +: Spring Web
@@ -51,3 +53,44 @@ h2 database
 megbeszélés:
 java 11-et használjunk!
 alap dependencies fent van a leírásban.
+
+04:12
+pom-ba dependencies beszúrása:
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+----------
+04:13
+
+spring-boot-devtools beillesztése a pom.xml-be
+<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-devtools -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-devtools</artifactId>
+    <version>2.6.6</version>
+</dependency>
+
+annotációk:
+
+ide: sts
+-------------
+04:22:
+
+betettem a V1-et az API hívásokhoz @Requestmapping - ként, az alatta lévő hívások mind a V1/ url alatt érhetőek el
+postman telepítés
+
+post:
+localhost:8080/V1/user
+{
+    "name" : "demoadmin",
+    "jelszo" : "1234",
+    "bemutatkozas" : "Én vagyok az adminisztrátor"
+}
+
+Az adatok elérhetőek:
+http://localhost:8080/h2-console
+JDBC url-het be kell írni a spring konzolon kiírt h2 url-t.
+
+Lekérdezés:
+GET localhost:8080/V1/user
