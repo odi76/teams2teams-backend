@@ -1,7 +1,7 @@
 package com.teams2teams.demo.controller;
 
 import com.teams2teams.demo.model.User;
-import com.teams2teams.demo.model.UserRepository;
+import com.teams2teams.demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

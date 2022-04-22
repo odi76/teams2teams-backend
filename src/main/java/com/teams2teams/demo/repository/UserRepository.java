@@ -1,4 +1,4 @@
-package com.teams2teams.demo.model;
+package com.teams2teams.demo.repository;
 
 import com.teams2teams.demo.model.User;
 import org.springframework.data.repository.CrudRepository;
