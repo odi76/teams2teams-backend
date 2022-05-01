@@ -94,3 +94,26 @@ JDBC url-het be kell írni a spring konzolon kiírt h2 url-t.
 
 Lekérdezés:
 GET localhost:8080/V1/user
+
+--------------
+04.26:
+JPA Buddy plugin install a IntelliJ-be.
+
+--------------
+04.28:
+Spring session management
+lehetséges módok:
+-data redis
+-jdbc példa: https://www.youtube.com/watch?v=7e5R7FetJnc
+-hazelcast
+---------------
+04:30:
+pom-ba dependencies beszúrása:
+
+		<dependency>
+			<groupId>org.springframework.session</groupId>
+			<artifactId>spring-session-jdbc</artifactId>
+		</dependency>
+
+
+
