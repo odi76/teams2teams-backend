@@ -113,7 +113,14 @@ pom-ba dependencies beszúrása:
 		<dependency>
 			<groupId>org.springframework.session</groupId>
 			<artifactId>spring-session-jdbc</artifactId>
-		</dependency>
+		</dependency>	
+--------------
+05:20
+adatbázis: firebase
+
+sign up megvalósítása
+h2 marad
+
 
 
 
