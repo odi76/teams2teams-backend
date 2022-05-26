@@ -1,0 +1,26 @@
+
+------------------
+D.A. feljegyzések
+------------------
+------------------
+
+Sok kérdés
+-------------------
+2022.05.18.
+  - Honnan jön a localhost:8080? Mire van a swaggerben a url szekció?
+  - Mi ez a konstrukció: return findById(id).orElseThrow(() -> new Exception())
+  - Az ident tab köz a két java forrás file-ban miért különbözik?
+  - A generált kódban sok nem használt osztály van! Lehet ezt redukálni vagy megszüntetni?
+  - Mitől lesz a response json formátum?
+2022.05.26.
+  - A sessionId elvileg minden api hívás része.
+    - technikai kérdés: hol adjuk ezt át? Header?
+    - minden api implementáció 0. lépése a session érvényesség ellenőrzése?
+
+Parancsok
+--------------------
+./mvnw spring-boot:run
+./mvnw install
+./mvnw clean compile
+
+ 
