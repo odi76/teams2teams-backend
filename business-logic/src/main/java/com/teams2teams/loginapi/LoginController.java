@@ -12,9 +12,9 @@ public class LoginController implements LoginApi {
 
     public ResponseEntity<LoginOutput> login(LoginInput loginInput) {
 
-        if (!loginInput.getUsername().equals("valaki") ||
+        if (!loginInput.getEmail().equals("valaki") ||
                 !loginInput.getPassword().equals("valami")) {
-            throw new InvalidLoginException(loginInput.getUsername());
+            throw new InvalidLoginException(loginInput.getEmail());
         }
         LoginOutput loginOutput = new LoginOutput();
 		loginOutput.setSessionId(UUID.randomUUID());
@@ -22,3 +22,4 @@ public class LoginController implements LoginApi {
     }
 
 }
+// 
