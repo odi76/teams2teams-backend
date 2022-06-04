@@ -120,7 +120,13 @@ adatbázis: firebase
 
 sign up megvalósítása
 h2 marad
+---------------
 
+06.04
+
+automatikusan lefutó adatfeltöltés:
+src/main/resources
+data.sql
 
 
 

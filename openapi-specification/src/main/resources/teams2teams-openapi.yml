@@ -95,7 +95,7 @@ components:
           type: string
         password:
           type: string
-          format: password
+          #format: password
 
     LoginOutput:
       type: object
