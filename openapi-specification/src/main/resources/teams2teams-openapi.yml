@@ -28,8 +28,24 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Pong'
-        '400':
-          $ref: '#/components/responses/GeneralError'
+
+  /registrate:
+    post:
+      tags:
+        - Authentication
+      description: User registration
+      operationId: registrate
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegistrationData'
+      responses:
+        '200':
+          description: Successfully registration
+        '500':
+          $ref: '#/components/responses/GeneralServerError'
 
   /login:
     post:
@@ -50,10 +66,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/LoginOutput'
-        '400':
-          $ref: '#/components/responses/GeneralError'
+        '404':
+          description: User or password not found
+        '500':
+          $ref: '#/components/responses/GeneralServerError'
           
-  /logout/{session_id}:
+  /logout:
     delete:
       tags:
         - Authentication
@@ -61,18 +79,16 @@ paths:
       operationId: logout
       parameters:
         - name: session_id
-          in: path
+          in: header
           required: true
           schema:
             type: string
             format: uuid
       responses:
         '200':
-          description: Successfully logout and deleted session id
-        '400':
-          $ref: '#/components/responses/GeneralError'
-        '404':
-          description: Session id not found 
+          description: Successfully logout and remove session id
+        '500':
+          $ref: '#/components/responses/GeneralServerError'
 
 components:
 
@@ -85,13 +101,25 @@ components:
         pong:
           type: string
 
+    RegistrationData:
+      type: object
+      required:
+        - email
+        - password
+      properties:
+        email:
+          type: string
+        password:
+          type: string
+          format: password
+
     LoginInput:
       type: object 
       required:
-        - username
+        - email
         - password
       properties:
-        username:
+        email:
           type: string
         password:
           type: string
@@ -106,7 +134,7 @@ components:
           type: string
           format: uuid
 
-    GeneralError:
+    ErrorMessage:
       type: object
       required:
         - error_code
@@ -119,10 +147,10 @@ components:
           type: string
 
   responses:
-    GeneralError:
+    GeneralServerError:
       description: For any unexpected operation
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/GeneralError'
+            $ref: '#/components/schemas/ErrorMessage'
 
