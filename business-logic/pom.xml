@@ -41,6 +41,12 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
 			<groupId>io.swagger</groupId>
 			<artifactId>swagger-annotations</artifactId>
 			<version>1.6.3</version>
