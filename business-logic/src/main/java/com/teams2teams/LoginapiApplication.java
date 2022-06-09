@@ -12,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.teams2teams.model.User;
 import com.teams2teams.repositories.UserRepository;
-import com.teams2teams.service.Userservice;
+import com.teams2teams.service.UserService;
 import com.teams2teams.controller.*;
 
 @SpringBootApplication
@@ -29,10 +29,10 @@ public class LoginapiApplication implements CommandLineRunner{
 	public void run(String... args) {
 
 		System.out.println("új userek felvétele");
-		User admin = new User( "admin2", "titkos");
-		User istvan = new User("István2", "iii");
-		User attila = new User("Attila2", "aaa");
-		User laci = new User("Laci", "lll");
+		User admin = new User( "admin2@a.hu", "titkos");
+		User istvan = new User("istvan2@i.hu", "iii");
+		User attila = new User("attila2@a.hu", "aaa");
+		User laci = new User("laci@l.hu", "lll");
 
 		userRepository.saveAllAndFlush(List.of(admin, istvan, attila, laci));
 

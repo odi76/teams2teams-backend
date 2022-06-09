@@ -1,6 +1,5 @@
 package com.teams2teams.model;
 
-import java.util.UUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -14,10 +13,9 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    //private String email;
 
     @Column(nullable = false)
-    private String name;
+    private String email; 
 
     @Column(nullable = false)
     private String password;
@@ -26,8 +24,8 @@ public class User {
 
     }    
 
-    public User(String name, String password) {
-        this.name = name;
+    public User(String email, String password) {
+        this.email = email;
         this.password = password;
     }
     
@@ -47,24 +45,6 @@ public class User {
         this.id = id;
     }
 
-
-
-
-
-    /**
-     * @return String return the name
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * @param name the name to set
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
     /**
      * @return String return the password
      */
@@ -79,6 +59,21 @@ public class User {
         this.password = password;
     }
 
+
+
+    /**
+     * @return String return the email
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * @param email the email to set
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
 }
 

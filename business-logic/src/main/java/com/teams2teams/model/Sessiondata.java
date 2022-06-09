@@ -1,38 +1,24 @@
 package com.teams2teams.model;
 
+import java.sql.Timestamp;
 import java.util.UUID;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Sessiondata {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private UUID sessionId;
     private java.sql.Timestamp sqlTimestamp;
     private long userId;
-    private UUID sessionId;
-
     
-
-    /**
-     * @return long return the id
-     */
-    public long getId() {
-        return id;
+    public Sessiondata(UUID sessionId, Timestamp sqlTimestamp, long userId) {
+        this.sessionId = sessionId;
+        this.sqlTimestamp = sqlTimestamp;
+        this.userId = userId;
     }
-
-    /**
-     * @param id the id to set
-     */
-    public void setId(long id) {
-        this.id = id;
-    }
-
     /**
      * @return java.sql.Timestamp return the sqlTimestamp
      */

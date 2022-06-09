@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.teams2teams.service.Userservice;
+import com.teams2teams.service.UserService;
 import com.teams2teams.model.User;
 import com.teams2teams.repositories.UserRepository;
 
@@ -16,7 +16,7 @@ import com.teams2teams.repositories.UserRepository;
 public class UserController {
 
     @Autowired
-    Userservice userService;
+    UserService userService;
 
     @GetMapping("/users")
     private List getAllUsers() {
@@ -25,9 +25,9 @@ public class UserController {
 
 
 
-    @GetMapping("/user/{uname}")
-    private List<User> getListOfUserByName (@PathVariable String uname) {
-        return userService.userRepository.findByNameLike(uname);
+    @GetMapping("/user/{email}")
+    private List<User> getListOfUserByEmail (@PathVariable String email) {
+        return userService.userRepository.findByEmail(email);
     }
 
 

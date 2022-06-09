@@ -12,6 +12,6 @@ import com.teams2teams.model.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer>{
 
-    public List<User> findByNameLike(String name);
+    public List<User> findByEmail(String email);
     
 }
