@@ -128,5 +128,22 @@ automatikusan lefutó adatfeltöltés:
 src/main/resources
 data.sql
 
+-----------------
+06.10 meeting
 
+demo csomagba kitenni, amit csak próbára hozok létre
+vp-be dbclass-okat felvinni
+-------------
+06.17
+log beillesztése:
+pom.xml-be:
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-log4j2</artifactId>
+</dependency>
 
+main-be:
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+   private static final Logger logger = LoggerFactory.getLogger(DemoApplication.class);
