@@ -210,5 +210,9 @@ liquibase:generateChangeLog
 -> h2-be hogy töltsünk be adatokat?
 -> liquibase-be hogy ne kerüljön be tesztadat, config elkülönítés
 
+------
+08.02
+https://stackabuse.com/a-guide-to-jpa-with-hibernate-relationship-mapping/
+https://vladmihalcea.com/the-best-way-to-map-a-onetomany-association-with-jpa-and-hibernate/
 
 
