@@ -147,3 +147,72 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
    private static final Logger logger = LoggerFactory.getLogger(DemoApplication.class);
+
+--------------
+07.22
+liquibase install
+cli 
+
+
+postgresql
+verziók:
+14.4 · 2022-06-16 · Notes
+13.7 · 2022-05-12 · Notes
+12.11 · 2022-05-12 · Notes
+11.16 · 2022-05-12 · Notes
+10.21 · 2022-05-12 · Notes
+mi ez a 4 szintű ugrás 1 hónap alatt?
+
+
+
+mysql online
+u: mfl@gmail.com
+pw: 8fMhYaCeWVyaani
+
+
+000webhost website pw: F^7BKDMWH(H3^U3lrIdV
+000webhost adatbázis:
+database name: 000t2t
+database username: dataadmin
+pw: Budapest-Dunakeszi22
+
+Database Space Limit: 1GB
+Database Table Limit: 100 Tables
+Manage your database at databases.000webhost.com
+Use localhost as a connection hostname.
+
+DB Name	DB User	DB Host	 
+id19310194_000t2t	id19310194_dataadmin	localhost
+
+Nem érhető el távolról, ez a megoldás NEM JÓ nekünk.
+
+----------------
+
+07.26
+liquibase hub sign up:
+u: matux
+e: mfl
+p: Adatbazis22!
+
+liquibase download: 4.14.0
+
+video:
+https://www.youtube.com/watch?v=pN6d2lS6dbg
+
+config h2-höz:
+https://blog.jooq.org/how-to-simulate-a-liquibase-migration-using-h2/
+
+goal:
+maven execute custom
+liquibase:generateChangeLog
+
+
+-> h2-be hogy töltsünk be adatokat?
+-> liquibase-be hogy ne kerüljön be tesztadat, config elkülönítés
+
+------
+08.02
+https://stackabuse.com/a-guide-to-jpa-with-hibernate-relationship-mapping/
+https://vladmihalcea.com/the-best-way-to-map-a-onetomany-association-with-jpa-and-hibernate/
+
+
