@@ -14,8 +14,29 @@ This is a Spring project which needs the following in order to install and run t
 
 * Maven
 * JDK 11
+* PostgreSQL 14
 
 ### 2.2 Installing
+
+####Create database and database user
+database name: t2tdb
+database user name: t2tdbuser
+database user password: alma
+
+The sql script to create:
+```bash
+DROP DATABASE  IF EXISTS t2tdb;
+DROP USER IF EXISTS t2tdbuser;
+
+CREATE DATABASE t2tdb;
+CREATE USER t2tdbuser WITH ENCRYPTED PASSWORD 'alma';
+GRANT ALL PRIVILEGES ON DATABASE t2tdb TO t2tdbuser;
+```
+
+You can change the default localhost database connection mode in this file: 
+```bash
+src/main/resources/application.properties
+```
 
 In order to install all Java packages that the application requiries due to operate a Spring application, execute the following command:
 
