@@ -18,7 +18,8 @@ This is a Spring project which needs the following in order to install and run t
 
 ### 2.2 Installing
 
-####Create database and database user
+Create database and database user
+
 database name: t2tdb
 database user name: t2tdbuser
 database user password: alma
