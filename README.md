@@ -59,6 +59,8 @@ mvn install
 
 ## 3. Authors
 
+István Dányi
+Attila Dányi
 Laszlo Matusek-Faludi
 
 ## 4. Version History
