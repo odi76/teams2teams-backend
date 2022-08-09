@@ -20,9 +20,11 @@ This is a Spring project which needs the following in order to install and run t
 
 Create database and database user
 
+```bash
 database name: t2tdb
 database user name: t2tdbuser
 database user password: alma
+```
 
 The sql script to create:
 ```bash
