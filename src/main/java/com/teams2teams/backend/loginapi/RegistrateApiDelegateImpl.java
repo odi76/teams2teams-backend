@@ -16,11 +16,12 @@ public class RegistrateApiDelegateImpl implements RegistrateApiDelegate {
 
     public ResponseEntity<Void> registrate(RegistrationData registrationData) {
         try {
-            userService.registrateUser(registrationData.getEmail(),
+            //TODO: OAS-t átírni, hogy user legyen a visszatérés
+            User user = userService.registrateUser(registrationData.getEmail(),
                     registrationData.getPassword());
         }
         catch (RuntimeException re) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            throw new UserAlreadyExistsException("User already exists!", re);
         }
         return new ResponseEntity<>(HttpStatus.OK);
     }

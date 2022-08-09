@@ -1,23 +1,26 @@
 package com.teams2teams.backend.loginapi;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Transient;
-import javax.persistence.GenerationType;
+import javax.persistence.*;
 import java.util.List;
 
+//TODO: db schema-t valahol vezetni kell
 @Entity
+@Table(name = "user")
 public class User {
 
+    //TODO: auto maradjon vagy sequence vagy más? Mitől függ?
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private String email;
-    private String password;
 
-    @Transient
-    private List<Session> sessions;
+    //TODO: jelölni kell, hogy unique
+    @Column(name = "email", nullable = false, length = 200)
+    private String email;
+
+    //TODO: nem a jelszót tároljuk!, md5-öt a kliens állítja elő?, mezőnév maradjon?
+    @Column(name = "password", nullable = false, length = 32)
+    private String password;
 
     protected User() {}
 
