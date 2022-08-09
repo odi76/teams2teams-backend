@@ -239,4 +239,39 @@ Felhasználó: postgres
 Jelszó: BpDk2022
 port: 5432
 
+---
+postgresql user és database létrehozása: -- ezt a heidisql-ben futtatom
 
+DROP DATABASE  IF EXISTS t2tdb;
+DROP USER IF EXISTS t2tdbuser;
+
+CREATE DATABASE t2tdb;
+CREATE USER t2tdbuser WITH ENCRYPTED PASSWORD 'alma';
+GRANT ALL PRIVILEGES ON DATABASE t2tdb TO t2tdbuser;
+
+-----
+Connect to postgresql:
+src/main/resources
+application.properties file-be:
+
+spring.jpa.properties.hibernate.globally_quoted_identifiers=true
+spring.datasource.url= jdbc:postgresql://localhost:5432/t2tdb
+spring.datasource.username= t2tdbuser
+spring.datasource.password= alma
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation= true
+spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.PostgreSQLDialect
+# Hibernate ddl auto (create, create-drop, validate, update)
+spring.jpa.hibernate.ddl-auto= update
+
+---
+
+jelszócsere:
+ALTER USER t2tdbuser WITH PASSWORD 'alma';
+
+-----
+08.09 meeting
+
+-> --- törölve --- maven script-tel szabályozni az indulást postgresql/h2
+-> hogy lehet változóval szabályozni a pom.xml és az application.propetries beolvasását?
+pl. postgre máshol érhető el...
+-> liquibase működése

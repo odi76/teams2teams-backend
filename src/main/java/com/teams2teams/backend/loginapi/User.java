@@ -1,5 +1,6 @@
 package com.teams2teams.backend.loginapi;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.GeneratedValue;
@@ -13,6 +14,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    //@Column(length = 200)
     private String email;
     private String password;
 
