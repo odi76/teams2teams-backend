@@ -215,4 +215,28 @@ liquibase:generateChangeLog
 https://stackabuse.com/a-guide-to-jpa-with-hibernate-relationship-mapping/
 https://vladmihalcea.com/the-best-way-to-map-a-onetomany-association-with-jpa-and-hibernate/
 
+-> postgresql 14.4 telepítés
+-> java-ban tesztadatok feltöltése
+
+-> tesztadatok betöltése (json-ban?) inkább liquibase h2-be.
+
+--------
+Postgresql install:
+https://www.enterprisedb.com/downloads/postgres-postgresql-downloads
+
+pw: BpDk2022
+port: 5432 (default)
+
+Az install végén a stack builder-t nem kell elindítani. (Felajánl olyanokat, ami nem kell.)
+
+Heidisql install:
+https://www.heidisql.com/download.php?download=installer#google_vignette
+
+csatlakozás:
+Típus: postgreSQL (TCP/IP)
+Library: libpq-12.dll
+Felhasználó: postgres
+Jelszó: BpDk2022
+port: 5432
+
 
