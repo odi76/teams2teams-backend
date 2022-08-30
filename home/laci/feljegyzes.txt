@@ -275,3 +275,10 @@ ALTER USER t2tdbuser WITH PASSWORD 'alma';
 -> hogy lehet változóval szabályozni a pom.xml és az application.propetries beolvasását?
 pl. postgre máshol érhető el...
 -> liquibase működése
+
+------
+08.23 meeting
+-> rest hívással lehessen a tesztadatokat legenerálni, ne legyen duplikátum
+-> liquibase: adatséma változás lekövetése
+átállunk flywawe-re
+
