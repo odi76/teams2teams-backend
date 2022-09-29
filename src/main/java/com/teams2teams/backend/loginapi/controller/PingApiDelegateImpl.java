@@ -1,4 +1,4 @@
-package com.teams2teams.backend.loginapi;
+package com.teams2teams.backend.loginapi.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

@@ -1,8 +1,10 @@
-package com.teams2teams.backend.loginapi;
+package com.teams2teams.backend.loginapi.controller;
 
 import java.util.UUID;
 
-import org.springframework.http.HttpStatus;
+import com.teams2teams.backend.loginapi.entity.Session;
+import com.teams2teams.backend.loginapi.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -13,15 +15,15 @@ import com.teams2teams.backend.openapi.model.LoginOutput;
 @Service
 public class LoginApiDelegateImpl implements LoginApiDelegate {
 
+    @Autowired
+    private UserService userService;
+
     @Override
     public ResponseEntity<LoginOutput> login(LoginInput loginInput) {
-
-        if (!loginInput.getEmail().equals("valaki") ||
-                !loginInput.getPassword().equals("valami")) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
-        }
+        Session session = userService.loginUser(loginInput.getEmail(),
+                loginInput.getPassword());
         LoginOutput loginOutput = new LoginOutput();
-        loginOutput.setSessionId(UUID.randomUUID());
+        loginOutput.setSessionId(UUID.fromString(session.getId()));
         return ResponseEntity.ok(loginOutput);
     }
 

@@ -1,5 +1,4 @@
-package com.teams2teams.backend.loginapi;
-
+package com.teams2teams.backend.loginapi.entity;
 
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
@@ -13,7 +12,7 @@ import java.util.UUID;
 public class Session {
 
     @Id
-    @Column(name = "id", length = 16)
+    @Column(name = "id", length = 36)
     private String id;
 
     @Column(name = "create_time")

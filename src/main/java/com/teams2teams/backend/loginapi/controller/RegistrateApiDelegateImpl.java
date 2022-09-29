@@ -1,5 +1,7 @@
-package com.teams2teams.backend.loginapi;
+package com.teams2teams.backend.loginapi.controller;
 
+import com.teams2teams.backend.loginapi.entity.User;
+import com.teams2teams.backend.loginapi.service.UserService;
 import com.teams2teams.backend.openapi.api.RegistrateApiDelegate;
 import com.teams2teams.backend.openapi.model.RegistrationData;
 
@@ -15,14 +17,8 @@ public class RegistrateApiDelegateImpl implements RegistrateApiDelegate {
     private UserService userService;
 
     public ResponseEntity<Void> registrate(RegistrationData registrationData) {
-        try {
-            //TODO: OAS-t átírni, hogy user legyen a visszatérés
-            User user = userService.registrateUser(registrationData.getEmail(),
-                    registrationData.getPassword());
-        }
-        catch (RuntimeException re) {
-            throw new UserAlreadyExistsException("User already exists!", re);
-        }
+        User user = userService.registrateUser(registrationData.getEmail(),
+                registrationData.getPassword());
         return new ResponseEntity<>(HttpStatus.OK);
     }
 

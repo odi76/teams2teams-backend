@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.teams2teams.backend.loginapi.RegistrateApiDelegateImpl;
+import com.teams2teams.backend.loginapi.controller.RegistrateApiDelegateImpl;
 import com.teams2teams.backend.openapi.model.RegistrationData;
 
 
