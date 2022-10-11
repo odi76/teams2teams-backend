@@ -20,10 +20,7 @@ public class Teams2TeamsBackendApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/ping").allowedOrigins("http://localhost:3000");
-				registry.addMapping("/login").allowedOrigins("http://localhost:3000");
-				registry.addMapping("/logout").allowedOrigins("http://localhost:3000");
-				registry.addMapping("/registrate").allowedOrigins("http://localhost:3000");
+				registry.addMapping("/**");
 			}
 		};
 	}
